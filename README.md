@@ -38,6 +38,7 @@ Tarama sonuçları, CVE listesi, düşük, orta, yüksek, kritik ve bilinmeyen r
 
 #Örnek Kullanım
 
+
 Örnek bir subdomain listesi olarak sub.txt dosyasını kullanabilirsiniz. Bu dosyanın içeriği örnek.com gibi hedef domainleri içermelidir.
 
 
