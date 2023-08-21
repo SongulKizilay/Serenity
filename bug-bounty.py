@@ -46,11 +46,6 @@ def install_and_run_bash_script(script_path):
     else:
         print("bash.sh dosyası zaten mevcut. İşlem devam ediyor.")
 
-# Renk tanımlamaları
-success_color = Fore.GREEN
-error_color = Fore.RED
-info_color = Fore.YELLOW
-reset_color = Style.RESET_ALL
 
 klasor2 = "/root/Desktop/bug/"
 silinecek_dosyalar = ["httpx.txt", "nuclei.txt", "subdomain.txt"]
