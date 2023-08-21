@@ -36,12 +36,15 @@ Güvenlik açıkları taraması yapmak için nuclei aracını kullanın.
 
 Tarama sonuçları, CVE listesi, düşük, orta, yüksek, kritik ve bilinmeyen riskli sonuçlar ayrı ayrı listelenecektir.
 
-Örnek Kullanım
+#Örnek Kullanım
+
 Örnek bir subdomain listesi olarak sub.txt dosyasını kullanabilirsiniz. Bu dosyanın içeriği örnek.com gibi hedef domainleri içermelidir.
+
 
    example.com
 
 Ardından Serenity'ı çalıştırmak için Python betiği olan python.py dosyasını kullanabilirsiniz:
+
     python python.py
 
 Serenity, subdomain taramasından sonra HTTP durumu kontrolü ve güvenlik açığı taraması yapacak ve sonuçları ayrı ayrı listeler halinde sunacaktır.
