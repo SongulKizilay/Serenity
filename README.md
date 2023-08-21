@@ -21,7 +21,6 @@ GAF'ı kullanmadan önce aşağıdaki adımları takip ederek kurulumu yapmalıs
    ```bash
    python -m pip install colorama
 Bash betiğini yüklemek için bash.sh dosyasını çalıştırabilirsiniz. Bu betik, GAF için gerekli Go araçlarını yükler. Eğer bu araçlar zaten yüklü ise bu adımı atlayabilirsiniz.
-    ```python
     ./bash.sh
 
 Kullanım
@@ -39,11 +38,10 @@ Tarama sonuçları, CVE listesi, düşük, orta, yüksek, kritik ve bilinmeyen r
 
 Örnek Kullanım
 Örnek bir subdomain listesi olarak sub.txt dosyasını kullanabilirsiniz. Bu dosyanın içeriği örnek.com gibi hedef domainleri içermelidir.
-   ```python
+
    example.com
 
 Ardından GAF'ı çalıştırmak için Python betiği olan python.py dosyasını kullanabilirsiniz:
-    ```python 
     python python.py
 
 GAF, subdomain taramasından sonra HTTP durumu kontrolü ve güvenlik açığı taraması yapacak ve sonuçları ayrı ayrı listeler halinde sunacaktır.
