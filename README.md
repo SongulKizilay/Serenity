@@ -1,11 +1,11 @@
 
-# GAF Bug Bounty Otomatize Aracı
+# Serenity Bug Bounty Otomatize Aracı
 
-**GAF (Go, Python, ve Bash Aracı)**, web güvenlik testlerini hızlı ve otomatik bir şekilde gerçekleştirmek için tasarlanmış bir araçtır. Bu araç, subdomain tarama, HTTP durumu kontrolü, ve güvenlik açığı taraması gibi işlemleri otomatize etmenize yardımcı olur. Bug Bounty programlarına katılmadan önce ve web uygulamalarını güvenceye almadan önce bu aracı kullanarak hedeflerinizi test edebilirsiniz.
+**Serenity (Go, Python, ve Bash Aracı)**, web güvenlik testlerini hızlı ve otomatik bir şekilde gerçekleştirmek için tasarlanmış bir araçtır. Bu araç, subdomain tarama, HTTP durumu kontrolü, ve güvenlik açığı taraması gibi işlemleri otomatize etmenize yardımcı olur. Bug Bounty programlarına katılmadan önce ve web uygulamalarını güvenceye almadan önce bu aracı kullanarak hedeflerinizi test edebilirsiniz.
 
 ## Gereksinimler
 
-GAF'ı kullanmadan önce aşağıdaki gereksinimlere sahip olmalısınız:
+Serenity'ı kullanmadan önce aşağıdaki gereksinimlere sahip olmalısınız:
 
 - Python
 - Go
@@ -14,17 +14,17 @@ GAF'ı kullanmadan önce aşağıdaki gereksinimlere sahip olmalısınız:
 
 ## Kurulum
 
-GAF'ı kullanmadan önce aşağıdaki adımları takip ederek kurulumu yapmalısınız:
+Serenity'ı kullanmadan önce aşağıdaki adımları takip ederek kurulumu yapmalısınız:
 
 1. Python bağımlılıklarını yüklemek için aşağıdaki komutları çalıştırın:
 
    ```bash
    python -m pip install colorama
-Bash betiğini yüklemek için bash.sh dosyasını çalıştırabilirsiniz. Bu betik, GAF için gerekli Go araçlarını yükler. Eğer bu araçlar zaten yüklü ise bu adımı atlayabilirsiniz.
+Bash betiğini yüklemek için bash.sh dosyasını çalıştırabilirsiniz. Bu betik, Serenity için gerekli Go araçlarını yükler. Eğer bu araçlar zaten yüklü ise bu adımı atlayabilirsiniz.
     ./bash.sh
 
 Kullanım
-GAF'ı kullanmak için aşağıdaki adımları takip edin:
+Serenity'ı kullanmak için aşağıdaki adımları takip edin:
 
 Subdomain listesi oluşturun veya kullanmak istediğiniz subdomain listesinin yolunu belirtin. Program sizi bu bilgiyi girmeniz için yönlendirecektir.
 
@@ -41,7 +41,7 @@ Tarama sonuçları, CVE listesi, düşük, orta, yüksek, kritik ve bilinmeyen r
 
    example.com
 
-Ardından GAF'ı çalıştırmak için Python betiği olan python.py dosyasını kullanabilirsiniz:
+Ardından Serenity'ı çalıştırmak için Python betiği olan python.py dosyasını kullanabilirsiniz:
     python python.py
 
 GAF, subdomain taramasından sonra HTTP durumu kontrolü ve güvenlik açığı taraması yapacak ve sonuçları ayrı ayrı listeler halinde sunacaktır.
