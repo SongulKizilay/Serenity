@@ -1,21 +1,31 @@
+import subprocess
 import os
 import colorama
-from colorama import Fore, Back, Style
-import importlib.util
-import subprocess
+from colorama import Fore, Style
 
-klasör2="/root/Desktop/bug/"
+# Renk tanımlamaları
+success_color = Fore.GREEN
+error_color = Fore.RED
+info_color = Fore.YELLOW
+reset_color = Style.RESET_ALL
+
+klasor2 = "/root/Desktop/bug/"
 silinecek_dosyalar = ["httpx.txt", "nuclei.txt", "subdomain.txt"]
+
 # Dosyaları kontrol et ve sil
 for dosya_adı in silinecek_dosyalar:
-    dosya_yolu = os.path.join(klasör2, dosya_adı)
-    if os.path.exists(klasör2):
+    dosya_yolu = os.path.join(klasor2, dosya_adı)
+    if os.path.exists(dosya_yolu):
         try:
-            os.remove(klasör2)
-            print(f"{klasör2} dosyası silindi.")
+            if os.path.isfile(dosya_yolu):
+                os.remove(dosya_yolu)
+                print(f"{dosya_adı} dosyası silindi.")
+            else:
+                os.rmdir(dosya_yolu)
+                print(f"{dosya_yolu} dizini silindi.")
 
         except Exception as e:
-            print(f"{dosya_adı} dosyası silinirken bir hata oluştu: {str(e)}")
+            print(f"{dosya_adı} dosyası/dizini silinirken bir hata oluştu: {str(e)}")
 
 bash_script = "./bash.sh"  # Bash betiğinin dosya yolu
 
@@ -24,12 +34,8 @@ if not os.path.exists(bash_script):
     try:
         # Bash betiği yüklü değilse, yükleyip sonra çalıştır
         install_command = f"chmod +x {bash_script} && ./{bash_script}"
-        result = subprocess.run(install_command, shell=True, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        # shell=True: Komutun bir kabukta çalışmasını sağlar.
-        # check=True: Çıkış kodunu kontrol eder, hata durumunda bir subprocess.CalledProcessError yükseltir.
-        # text=True: Çıkışı metin (string) olarak alır.
-        # stdout=subprocess.PIPE: Standart çıktıyı yakalar.
-        # stderr=subprocess.PIPE: Standart hata çıktısını yakalar.
+        result = subprocess.run(install_command, shell=True, check=True, text=True, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE)
 
         # Çıktıyı yazdırın
         print("Çıkış kodu:", result.returncode)
@@ -43,13 +49,6 @@ if not os.path.exists(bash_script):
 else:
     print("bash.sh dosyası zaten mevcut. İşlem devam ediyor.")
 
-
-# Renk tanımlamaları
-success_color = Fore.GREEN
-error_color = Fore.RED
-info_color = Fore.YELLOW
-reset_color = Style.RESET_ALL
-
 # Taranacak adreslerin listesini giriniz
 print(info_color + "Taranacak adreslerin listesini giriniz" + reset_color)
 dosya_yolu = input("Dosya yolunu girin: ")
@@ -58,7 +57,7 @@ dosya_yolu = input("Dosya yolunu girin: ")
 print(info_color + "Subdomain listesi taranıyor" + reset_color)
 print("****************************************************************")
 
-komut = f"cd /root/go/bin && ./subfinder -dL {dosya_yolu} >> /root/Desktop/bug/subdomain.txt && pwd"
+komut = f"cd /root/go/bin && ./subfinder -dL {dosya_yolu} >> /root/Desktop/bug/subdomain.txt"
 exit_code = os.system(komut)
 
 if exit_code == 0:
@@ -145,3 +144,13 @@ if sonuc9 == 0:
     print(success_color + f"'{komut9}' başarıyla çalıştırıldı." + reset_color)
 else:
     print(error_color + f"'{komut9}' çalıştırılırken bir hata oluştu. Çıkış kodu: {sonuc9}" + reset_color)
+
+# Ses dosyasını çalmak için kullanılacak fonksiyon
+def play_audio():
+    subprocess.run(["mpv", "fbı.mp3"])
+
+try:
+    while True:
+        subprocess.run(["mpv", "--loop", "fbı.mp3"])
+except KeyboardInterrupt:
+    print("Ctrl+C tuş kombinasyonu algılandı. Çıkılıyor...")
