@@ -47,7 +47,7 @@ Tarama sonuçları, CVE listesi, düşük, orta, yüksek, kritik ve bilinmeyen r
 Ardından Serenity'ı çalıştırmak için Python betiği olan python.py dosyasını kullanabilirsiniz:
 
     python python.py
-
+#dosya yollarını kendi dosya yolunuza göre düzenlemeniz gerekmete
 Serenity, subdomain taramasından sonra HTTP durumu kontrolü ve güvenlik açığı taraması yapacak ve sonuçları ayrı ayrı listeler halinde sunacaktır.
 
 Serenity (Go, Python, ve Bash Aracı) ile web güvenlik testlerini otomatize edebilir ve potansiyel güvenlik açıklarını belirlemek için kullanabilirsiniz. Bug Bounty programlarına katkıda bulunurken, bu aracı kullanarak hedeflerinizi güvenceye alabilirsiniz.
