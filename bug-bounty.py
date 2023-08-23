@@ -1,6 +1,7 @@
 import os
 import colorama
 from colorama import Fore, Style
+import subprocess
 
 # Renk tanımlamaları
 success_color = Fore.GREEN
