@@ -71,7 +71,7 @@ komut2 = f"cd /root/go/bin/ && cat '/root/Desktop/Serenity/subdomain.txt' | ./ht
 exit_code = os.system(komut2)
 
 if exit_code == 0:
-    print(success_color + f"'{komut2}' komutu başarıyla çalıştırıldı. subdomain.txt dosyası oluşturuldu" + reset_color)
+    print(success_color + f"'{komut2}' komutu başarıyla çalıştırıldı. httpx.txt dosyası oluşturuldu" + reset_color)
 else:
     print(error_color + f"'{komut2}' komutu çalıştırılırken bir hata oluştu. Çıkış kodu: {exit_code}" + reset_color)
 
@@ -81,7 +81,7 @@ komut3 = f"cd /root/go/bin/ && ./nuclei -l '/root/Desktop/Serenity/httpx.txt'  -
 exit_code = os.system(komut3)
 
 if exit_code == 0:
-    print(success_color + f"'{komut3}' komutu başarıyla çalıştırıldı. subdomain.txt dosyası oluşturuldu" + reset_color)
+    print(success_color + f"'{komut3}' komutu başarıyla çalıştırıldı. nuclei.txt dosyası oluşturuldu" + reset_color)
 else:
     print(error_color + f"'{komut3}' komutu çalıştırılırken bir hata oluştu. Çıkış kodu: {exit_code}" + reset_color)
 
