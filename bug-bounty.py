@@ -88,7 +88,7 @@ else:
 # Tarama sonucu çıkan CVE listesi
 print("******************************************\n")
 print(info_color + "Tarama sonucu çıkan CVE listesi" + reset_color)
-komut4 = "grep CVE* /root/Desktop/Serenity/nuclei.txt "
+komut4 = "awk '/CVE-[0-9]{4}-[0-9]{4,8}/ {print}' /root/Desktop/Serenity/nuclei.txt "
 sonuc4 = os.system(komut4)
 if sonuc4 == 0:
     print(success_color + f"'{komut4}' başarıyla çalıştırıldı." + reset_color)
@@ -98,7 +98,7 @@ else:
 # Tarama sonucu çıkan low sonuçların listesi
 print("******************************************\n")
 print(info_color + "Tarama sonucu çıkan low sonuçların listesi" + reset_color)
-komut5 = "grep '\[low\]' /root/Desktop/Serenity/nuclei.txt "
+komut5 = "awk '/\[low\]/' /root/Desktop/Serenity/nuclei.txt "
 sonuc5 = os.system(komut5)
 if sonuc5 == 0:
     print(success_color + f"'{komut5}' başarıyla çalıştırıldı." + reset_color)
@@ -108,7 +108,7 @@ else:
 # Tarama sonucu çıkan medium listesi
 print("################################################################")
 print(info_color + "Tarama sonucu çıkan medium listesi" + reset_color)
-komut6 = "grep '\[medium\]' /root/Desktop/Serenity/nuclei.txt "
+komut6 = "awk '/\[medium\]/'  /root/Desktop/Serenity/nuclei.txt"
 sonuc6 = os.system(komut6)
 if sonuc6 == 0:
     print(success_color + f"'{komut6}' başarıyla çalıştırıldı." + reset_color)
@@ -118,7 +118,7 @@ else:
 # Tarama sonucu çıkan high listesi
 print("################################################################")
 print(info_color + "Tarama sonucu çıkan high listesi" + reset_color)
-komut7 = "grep '\[high\]' /root/Desktop/Serenity/nuclei.txt"
+komut7 = "awk '/\[high\]/' /root/Desktop/Serenity/nuclei.txt"
 sonuc7 = os.system(komut7)
 if sonuc7 == 0:
     print(success_color + f"'{komut7}' başarıyla çalıştırıldı." + reset_color)
@@ -128,7 +128,7 @@ else:
 # Tarama sonucu çıkan critical listesi
 print("################################################################")
 print(info_color + "Tarama sonucu çıkan critical listesi" + reset_color)
-komut8 = "grep '\[critical\]' /root/Desktop/Serenity/nuclei.txt "
+komut8 = "awk '/\[critical\]/' /root/Desktop/Serenity/nuclei.txt "
 sonuc8 = os.system(komut8)
 if sonuc8 == 0:
     print(success_color + f"'{komut8}' başarıyla çalıştırıldı." + reset_color)
@@ -138,7 +138,7 @@ else:
 # Tarama sonucu çıkan unknown listesi
 print("################################################################")
 print(info_color + "Tarama sonucu çıkan unknown listesi" + reset_color)
-komut9 = "grep '\[unknown\]' /root/Desktop/Serenity/nuclei.txt "
+komut9 = "awk '/\[unknown\]/'  /root/Desktop/Serenity/nuclei.txt "
 sonuc9 = os.system(komut9)
 if sonuc9 == 0:
     print(success_color + f"'{komut9}' başarıyla çalıştırıldı." + reset_color)
