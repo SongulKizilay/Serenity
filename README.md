@@ -52,3 +52,4 @@ Serenity, subdomain taramasından sonra HTTP durumu kontrolü ve güvenlik açı
 
 Serenity (Go, Python, ve Bash Aracı) ile web güvenlik testlerini otomatize edebilir ve potansiyel güvenlik açıklarını belirlemek için kullanabilirsiniz. Bug Bounty programlarına katkıda bulunurken, bu aracı kullanarak hedeflerinizi güvenceye alabilirsiniz.
 
+dosya yollarıını kendi dizininize göre değiştirmeniz gerekir
